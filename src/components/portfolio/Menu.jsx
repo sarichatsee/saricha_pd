@@ -11,7 +11,7 @@ const Menu = [
         image: Work1,
         title: "VR Escape Room",
         category: "Design",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus vitae justo",
+        desc: "In immersive technologies, description...",
     },
     {
         id: 2,
@@ -27,15 +27,13 @@ const Menu = [
         category: "Branding",
         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus vitae justo",
     },
-    ,
     {
         id: 4,
         image: Work4,
-        title: "Onboarding Motivation",
+        title: "Bird Repository Website",
         category: "Design",
         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus vitae justo",
     },
-    ,
     {
         id: 5,
         image: Work5,
@@ -43,7 +41,6 @@ const Menu = [
         category: "Creative",
         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus vitae justo",
     },
-    ,
     {
         id: 6,
         image: Work6,
