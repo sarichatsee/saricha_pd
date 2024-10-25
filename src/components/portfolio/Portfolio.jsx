@@ -74,7 +74,7 @@ const Portfolio = () => {
                             <>
                                 <h3>{selectedItem.title}</h3>
                                 <p>{selectedItem.category}</p>
-                                <img src={selectedItem.image} alt={selectedItem.title} />
+                                <img src={selectedItem.image} alt={selectedItem.title} className="modal__gallery"/>
                                 <p>{selectedItem.desc}</p> {/* Description */}
                             </>
                         )}
