@@ -18,7 +18,7 @@ const Menu = [
         image: Work2,
         title: "BeLeaf Mobile App",
         category: "Art",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus vitae justo",
+        desc: "Team BinaryBlossoms went to participate in DSTA's BrainHack 2024 CODE_EXP, and are proud to announce that we have made finals with our prototype! \nBeLeaf is a mobile application utilising Amazon Web Service's Rekognition to help differentiate between real and fake plants. It is designed to help combat the issue of contaminated recyclables. \nUsers will be able to take a picture of the object they want to recycle, and the app will be able to differentiate recyclables from non-recyclables, additionally, it can also recommend users on what to do with non-recyclables - like dropping off a toy ball at an orphanage or thrift store. ",
     },
     {
         id: 3,
