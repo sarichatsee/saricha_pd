@@ -69,6 +69,9 @@ body {
   line-height: 1.7;
   color: var(--text-color);
 }
+body::-webkit-scrollbar {
+  display: none; /* Hides scrollbar in Chrome, Safari, and Opera */
+}
 
 h1, h2, h3 {
   color: var(--title-color);

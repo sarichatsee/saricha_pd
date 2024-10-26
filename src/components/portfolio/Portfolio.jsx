@@ -5,6 +5,7 @@ import Menu from "./Menu";
 const Portfolio = () => {
     const [items, setItems] = useState(Menu);
     const [modal, setModal] = useState(false);
+    const [isVisible, setIsVisible] = useState(false);
     const [selectedItem, setSelectedItem] = useState(null);
 
     const filterItem = (categoryItem) => {
@@ -15,22 +16,24 @@ const Portfolio = () => {
     const openModal = (item) => {
         setSelectedItem(item);
         setModal(true);
+        setTimeout(() => setIsVisible(true), 10); // Delay to trigger animation
     };
 
     const closeModal = () => {
-        setModal(false);
-        setSelectedItem(null);
+        setIsVisible(false);
+        setTimeout(() => {
+            setModal(false);
+            setSelectedItem(null);
+        }, 300); // Match the duration of the closing animation
     };
 
-    // Add/remove body overflow when modal is opened/closed
+    // Lock body scroll when modal is open
     useEffect(() => {
         if (modal) {
             document.body.style.overflow = "hidden";
         } else {
             document.body.style.overflow = "auto";
         }
-
-        // Cleanup function to restore the original state
         return () => {
             document.body.style.overflow = "auto";
         };
@@ -57,7 +60,6 @@ const Portfolio = () => {
                                 <img src={image} alt="" className="work__img" />
                                 <div className="work__mask"></div>
                             </div>
-
                             <span className="work__category">{category}</span>
                             <h3 className="work__title">{title}</h3>
                         </div>
@@ -67,15 +69,15 @@ const Portfolio = () => {
 
             {/* Modal */}
             {modal && (
-                <div className="modal-overlay" onClick={closeModal}>
-                    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-                        <button className="close-modal" onClick={closeModal}>X</button>
+                <div className={`modal__overlay ${isVisible ? "active" : ""}`} onClick={closeModal}>
+                    <div className="modal__content" onClick={(e) => e.stopPropagation()}>
+                        <button className="close__modal" onClick={closeModal}>X</button>
                         {selectedItem && (
                             <>
                                 <h3>{selectedItem.title}</h3>
                                 <p>{selectedItem.category}</p>
                                 <img src={selectedItem.image} alt={selectedItem.title} className="modal__gallery"/>
-                                <p>{selectedItem.desc}</p> {/* Description */}
+                                <p>{selectedItem.desc}</p>
                             </>
                         )}
                     </div>
@@ -83,6 +85,6 @@ const Portfolio = () => {
             )}
         </section>
     );
-}
+};
 
 export default Portfolio;
