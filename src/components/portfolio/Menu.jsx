@@ -5,6 +5,11 @@ import Work4 from "../../assets/work-4.svg";
 import Work5 from "../../assets/work-5.svg";
 import Work6 from "../../assets/work-6.svg";
 
+/* Project pictures */
+import beleaf1 from "../../assets/Project/brainhack-codexp_teamphoto.jpg";
+import tfscale1 from "../../assets/Project/tfscale_drone.jpg";
+import tfscale2 from "../../assets/Project/tfscale_industryvisit1.jpg";
+
 const Menu = [
     {
         id: 1,
@@ -12,6 +17,7 @@ const Menu = [
         title: "VR Escape Room",
         category: "Design",
         desc: "In immersive technologies, description...",
+        images: [],
     },
     {
         id: 2,
@@ -19,6 +25,7 @@ const Menu = [
         title: "BeLeaf Mobile App",
         category: "Art",
         desc: "Team BinaryBlossoms went to participate in DSTA's BrainHack 2024 CODE_EXP, and are proud to announce that we have made finals with our prototype! BeLeaf is a mobile application utilising Amazon Web Service's Rekognition to help differentiate between real and fake plants. It is designed to help combat the issue of contaminated recyclables. \nUsers will be able to take a picture of the object they want to recycle, and the app will be able to differentiate recyclables from non-recyclables, additionally, it can also recommend users on what to do with non-recyclables - like dropping off a toy ball at an orphanage or thrift store. ",
+        images: [beleaf1, tfscale1, tfscale2],
     },
     {
         id: 3,
@@ -26,6 +33,7 @@ const Menu = [
         title: "AR Name Card",
         category: "Branding",
         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus vitae justo",
+        images: [],
     },
     {
         id: 4,
@@ -33,6 +41,7 @@ const Menu = [
         title: "Bird Repository Website",
         category: "Design",
         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus vitae justo",
+        images: [],
     },
     {
         id: 5,
@@ -40,6 +49,7 @@ const Menu = [
         title: "iMac Mockup Design",
         category: "Creative",
         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus vitae justo",
+        images: [],
     },
     {
         id: 6,
@@ -47,6 +57,7 @@ const Menu = [
         title: "Game Store App Concept",
         category: "Art",
         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus vitae justo",
+        images: [],
     },
 ];
 

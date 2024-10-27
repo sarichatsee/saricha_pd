@@ -7,16 +7,9 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-// Image imports
-import slide_image_1 from '../../assets/Project/brainhack-codexp_teamphoto.jpg';
-import slide_image_2 from '../../assets/Project/tfscale_drone.jpg';
-import slide_image_3 from '../../assets/Project/tfscale_industryvisit1.jpg';
-import slide_image_4 from '../../assets/Project/tfscale_socialpic1.jpg';
-
-function TestCarousel() {
+function TestCarousel({ images = [] }) {
     return (
         <div className="carousel-container">
-            <h1 className="heading">Project Highlights</h1>
             <Swiper
                 effect="coverflow"
                 grabCursor={true}
@@ -34,18 +27,17 @@ function TestCarousel() {
                 modules={[EffectCoverflow, Pagination, Navigation]}
                 className="swiper-container"
             >
-                <SwiperSlide>
-                    <img src={slide_image_1} alt="Project 1" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src={slide_image_2} alt="Project 2" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src={slide_image_3} alt="Project 3" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src={slide_image_4} alt="Project 4" />
-                </SwiperSlide>
+                {images.map((mediaSrc, index) => (
+                    <SwiperSlide key={index}>
+                        {/* Check if mediaSrc is a video or an image */}
+                        {mediaSrc.endsWith(".mp4") ? (
+                            <video src={mediaSrc} controls className="carousel-media" draggable="false" />
+                        ) : (
+                            <img src={mediaSrc} alt={`slide-${index}`} className="carousel-media" draggable="false" />
+                        )}
+                    </SwiperSlide>
+                ))}
+
             </Swiper>
         </div>
     );

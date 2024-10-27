@@ -14,7 +14,6 @@ const App = () => {
     <>
       <Sidebar />
       <main className='main'>
-        <TestCarousel />
         <Home />
         <About />
         <Services />

@@ -1,21 +1,16 @@
+/* General carousel styles */
 .carousel-container {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  background-color: #242424;
+  background-color: var(--container-color);
   color: rgba(255, 255, 255, 0.87);
-}
-
-.heading {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
 }
 
 .swiper-container {
   padding: 2rem;
   border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .swiper-slide {
@@ -30,24 +25,28 @@
   transition: transform 300ms ease-in-out;
 }
 
+/* Style for images in the swiper slides */
 .swiper-slide img {
   object-fit: cover;
   transition: transform 0.3s ease;
+  filter: none !important; /* Ensure no color overlay on images */
 }
 
+/* Hover effect on images */
 .swiper-slide:hover img {
   transform: scale(1.05);
 }
 
+/* Pagination bullet styles */
 .swiper-pagination-bullet {
   background-color: #646cff;
-  opacity: 0.7;
 }
 
 .swiper-pagination-bullet-active {
   background-color: #535bf2;
 }
 
+/* Navigation button styles */
 .swiper-button-prev,
 .swiper-button-next {
   color: #fff;
@@ -55,10 +54,34 @@
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: rgba(0, 0, 0, 0.5);
+  outline: none; /* Remove outline for buttons */
+  transition: background 0.3s ease;
 }
 
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
-  background: #646cff;
+  color: var(--first-color);
+}
+
+/* Remove any focus outline or active overlay */
+.swiper-slide:focus,
+.swiper-slide:active,
+.swiper-button-prev:focus,
+.swiper-button-next:focus {
+  outline: none;
+  filter: none;
+  background: transparent;
+}
+
+/* Prevent focus and selection on Swiper slides */
+.swiper-slide {
+  user-select: none; /* Disable text selection */
+  -webkit-tap-highlight-color: transparent; /* Remove highlight on mobile devices */
+}
+
+/* Ensure images and videos don't inherit any overlay */
+.swiper-slide img, .swiper-slide video {
+  pointer-events: none; /* Prevent click focus */
+  filter: none; /* Remove any filter */
+  outline: none; /* Remove any focus outline */
 }

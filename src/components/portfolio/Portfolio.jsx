@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./portfolio.css";
 import Menu from "./Menu";
+import TestCarousel from "../testcarousel/test-carousel";
 
 const Portfolio = () => {
     const [items, setItems] = useState(Menu);
@@ -16,7 +17,7 @@ const Portfolio = () => {
     const openModal = (item) => {
         setSelectedItem(item);
         setModal(true);
-        setTimeout(() => setIsVisible(true), 10); // Delay to trigger animation
+        setTimeout(() => setIsVisible(true), 10);
     };
 
     const closeModal = () => {
@@ -24,10 +25,9 @@ const Portfolio = () => {
         setTimeout(() => {
             setModal(false);
             setSelectedItem(null);
-        }, 300); // Match the duration of the closing animation
+        }, 300);
     };
 
-    // Lock body scroll when modal is open
     useEffect(() => {
         if (modal) {
             document.body.style.overflow = "hidden";
@@ -76,7 +76,8 @@ const Portfolio = () => {
                             <>
                                 <h3>{selectedItem.title}</h3>
                                 <p>{selectedItem.category}</p>
-                                <img src={selectedItem.image} alt={selectedItem.title} className="modal__gallery"/>
+                                {/* Render TestCarousel with selected images */}
+                                <TestCarousel images={selectedItem.images} />
                                 <p>{selectedItem.desc}</p>
                             </>
                         )}
