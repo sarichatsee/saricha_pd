@@ -1,0 +1,64 @@
+.carousel-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: #242424;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+.heading {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.swiper-container {
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.swiper-slide {
+  display: flex;
+  max-width: 350px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #1a1a1a;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 300ms ease-in-out;
+}
+
+.swiper-slide img {
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.swiper-slide:hover img {
+  transform: scale(1.05);
+}
+
+.swiper-pagination-bullet {
+  background-color: #646cff;
+  opacity: 0.7;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #535bf2;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #fff;
+  font-size: 1.2rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background: #646cff;
+}

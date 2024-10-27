@@ -7,12 +7,14 @@ import Services from './components/services/Services';
 import Resume from './components/resume/Resume';
 import Portfolio from './components/portfolio/Portfolio';
 import Contact from './components/contact/Contact';
+import TestCarousel from './components/testcarousel/test-carousel';
 
 const App = () => {
   return (
     <>
       <Sidebar />
       <main className='main'>
+        <TestCarousel />
         <Home />
         <About />
         <Services />
