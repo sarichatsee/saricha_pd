@@ -11,6 +11,7 @@ import beleaf2 from "../../assets/Project/beleaf-prototype-02.mp4";
 import tfscale1 from "../../assets/Project/tfscale_drone.jpg";
 import tfscale2 from "../../assets/Project/tfscale_industryvisit1.jpg";
 import eggpainting1 from "../../assets/Project/art-eggpainting-01.png";
+import c33701 from "../../assets/Project/c337escaperoom01.mp4";
 
 const Menu = [
     {
@@ -19,7 +20,7 @@ const Menu = [
         title: "VR Escape Room",
         category: "Design",
         desc: "In immersive technologies, description...",
-        images: [],
+        images: [c33701],
     },
     {
         id: 2,
