@@ -20,19 +20,39 @@
   align-items: center;
   border-radius: 10px;
   overflow: hidden;
-  background: #1a1a1a;
   box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
   transition: transform 300ms ease-in-out;
 }
 
-/* Style for images in the swiper slides */
-.swiper-slide img {
+/* General media styling */
+.carousel-media {
+  height: 230px; /* Set explicit height for uniformity */
+  width: 100%;
   object-fit: cover;
+  border-radius: 8px;
   transition: transform 0.3s ease;
-  filter: none !important; /* Ensure no color overlay on images */
 }
 
-/* Hover effect on images */
+/* Specific styling for videos */
+.video {
+  height: 230px; /* Explicit height for video */
+  width: 100%; /* Full width */
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  display: block; /* Ensure it’s a block element */
+}
+
+.video-controls-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  bottom: 5px;
+}
+
+/* Hover effect for images (videos are not scaled on hover) */
 .swiper-slide:hover img {
   transform: scale(1.05);
 }
@@ -63,16 +83,6 @@
   color: var(--first-color);
 }
 
-/* Remove any focus outline or active overlay */
-.swiper-slide:focus,
-.swiper-slide:active,
-.swiper-button-prev:focus,
-.swiper-button-next:focus {
-  outline: none;
-  filter: none;
-  background: transparent;
-}
-
 /* Prevent focus and selection on Swiper slides */
 .swiper-slide {
   user-select: none; /* Disable text selection */
@@ -80,8 +90,8 @@
 }
 
 /* Ensure images and videos don't inherit any overlay */
-.swiper-slide img, .swiper-slide video {
-  pointer-events: none; /* Prevent click focus */
+.swiper-slide img,
+.swiper-slide video {
   filter: none; /* Remove any filter */
   outline: none; /* Remove any focus outline */
 }

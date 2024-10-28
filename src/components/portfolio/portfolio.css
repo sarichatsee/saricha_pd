@@ -129,6 +129,7 @@
     max-width: 650px;
     width: 75%;
     max-height: 80vh;
+    min-height: 80vh;
     overflow-y: auto;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;     /* Firefox */
