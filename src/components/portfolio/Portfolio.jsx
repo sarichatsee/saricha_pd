@@ -78,7 +78,7 @@ const Portfolio = () => {
                                 <p>{selectedItem.category}</p>
                                 {/* Render TestCarousel with selected images */}
                                 <TestCarousel images={selectedItem.images} />
-                                <p>{selectedItem.desc}</p>
+                                <p dangerouslySetInnerHTML={{ __html: selectedItem.desc }}></p>
                             </>
                         )}
                     </div>

@@ -44,6 +44,14 @@
   display: block; /* Ensure it’s a block element */
 }
 
+:fullscreen .video,
+.video:fullscreen {
+  width: auto; /* Allow the video to keep its original width */
+  height: auto; /* Keep original height without stretching */
+  max-width: 100%; /* Constrain width to avoid overflow */
+  object-fit: contain; /* Ensure the video is shown in its natural aspect ratio */
+}
+
 .video-controls-container {
   display: flex;
   align-items: center;
