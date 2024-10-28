@@ -1,6 +1,7 @@
 /* General carousel styles */
 .carousel-container {
   max-width: 1280px;
+  height: 40vh;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -59,11 +60,11 @@
 
 /* Pagination bullet styles */
 .swiper-pagination-bullet {
-  background-color: #646cff;
+  background-color: var(--first-color);
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #535bf2;
+  background-color: var(--first-color);
 }
 
 /* Navigation button styles */
