@@ -27,9 +27,8 @@
   }
 }
 
-.itemLeft,
-.itemRight {
-  width: 200px;
+.itemLeft, .itemRight {
+  width: 160px;
   height: 100px;
   background-color: #e11d48;
   border-radius: 6px;
@@ -37,7 +36,11 @@
   animation-timing-function: linear;
   animation-duration: 30s;
   animation-iteration-count: infinite;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
+
 
 .itemLeft {
   left: max(calc(200px * 8), 100%);
@@ -51,26 +54,32 @@
 
 .item1 {
   animation-delay: calc(30s / 8 * (8 - 1) * -1);
+  background-image: url(../../assets/Certficiate/17176_5_6560766_1730276119_AWS-Skill\ Builder-Course-Completion-Certificate-1.png);
 }
 
 .item2 {
   animation-delay: calc(30s / 8 * (8 - 2) * -1);
+  background-image: url(../../assets/Certficiate/CertificateOfCompletion_BuildingaWebsitewithNode.jsandExpress.js-1.png);
 }
 
 .item3 {
   animation-delay: calc(30s / 8 * (8 - 3) * -1);
+  background-image: url(../../assets/Certficiate/DSTA\ Brainhack\ Code\ EXP\ Participation\ \(finalist\)-1.png);
 }
 
 .item4 {
   animation-delay: calc(30s / 8 * (8 - 4) * -1);
+  background-image: url(../../assets/Certficiate/PCEP\ -\ Certified\ Entry-Level\ Python\ Programmer-1.png);
 }
 
 .item5 {
   animation-delay: calc(30s / 8 * (8 - 5) * -1);
+  background-image: url(../../assets/Certficiate/Coursera\ Google\ UX\ Design-1.png);
 }
 
 .item6 {
   animation-delay: calc(30s / 8 * (8 - 6) * -1);
+  background-image: url(../../assets/Certficiate/CertificateOfCompletion_Programming\ Foundations\ Software\ TestingQA-1.png);
 }
 
 .item7 {

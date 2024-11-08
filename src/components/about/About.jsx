@@ -1,6 +1,6 @@
 import React from "react";
 import "./about.css";
-import Image from "../../assets/avatar-2.svg";
+import Image from "../../assets/pngtree-roman-statue-isolated-on-white-background-png-image_11605234.png";
 import AboutBox from "./AboutBox";
 
 const About = () => {
