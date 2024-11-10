@@ -38,6 +38,7 @@ const Resume = () => {
                                 <Card key={id} icon={val.icon} title={val.title} year={val.year} desc={val.desc} />
                             )
                         }
+                        return null;
                     })}
                 </div>
 
@@ -48,6 +49,7 @@ const Resume = () => {
                                 <Card key={index} icon={val.icon} title={val.title} year={val.year} desc={val.desc} />
                             )
                         }
+                        return null;
                     })}
                 </div>
             </div>
