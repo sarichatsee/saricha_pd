@@ -1,13 +1,14 @@
 import React from "react";
 import "./about.css";
-import Image from "../../assets/pngtree-roman-statue-isolated-on-white-background-png-image_11605234.png";
+import Image from "../../assets/pictures-of-my-ugly-face/avatar1.png";
 import AboutBox from "./AboutBox";
+import "../resume/wrapper.css";
 
 const About = () => {
     return (
         <section className="about container section" id="about">
             <h2 className="section__title">About Me <br /><span className="text-animation"><span></span></span></h2>
-            
+
 
             <div className="about__container grid">
                 <img src={Image} alt="" className="about__img" />
@@ -51,6 +52,26 @@ const About = () => {
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <br /><br />
+
+            <div className="wrapper__container">
+                {/* Left scroller */}
+                <div className="wrapper">
+                    <div className="itemLeft itemLeft1"></div>
+                    <div className="itemLeft itemLeft2"></div>
+                    <div className="itemLeft itemLeft3"></div>
+                    <div className="itemLeft itemLeft4"></div>
+                    <div className="itemLeft itemLeft5"></div>
+                    <div className="itemLeft itemLeft6"></div>
+                </div>
+
+                {/* Right scroller */}
+                <div className="wrapper">
+                    <div className="itemRight itemRight1"></div>
+                    <div className="itemRight itemRight2"></div>
                 </div>
             </div>
 

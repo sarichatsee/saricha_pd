@@ -2,7 +2,7 @@
   width: 90%;
   max-width: 1536px;
   margin-inline: auto;
-  height: 140px;
+  height: 70px;
   margin-bottom: 2rem;
   position: relative;
   overflow: hidden;
@@ -15,7 +15,7 @@
   );
   display: flex;
   align-items: center;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3) inset;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1) inset;
 }
 
 @keyframes scrollLeft {
@@ -31,8 +31,8 @@
 }
 
 .itemLeft, .itemRight {
-  width: 160px;
-  height: 90%; /* need help here! */
+  width: 50px;
+  height: 60px; 
   position: absolute;
   animation-timing-function: linear;
   animation-duration: 30s;
@@ -53,40 +53,52 @@
   animation-name: scrollRight;
 }
 
-.item1 {
+.itemLeft1 {
   animation-delay: calc(30s / 8 * (8 - 1) * -1);
-  background-image: url(../../assets/Certficiate/17176_5_6560766_1730276119_AWS-Skill\ Builder-Course-Completion-Certificate-1.png);
+  background-image: url(../../assets/social-media-icons/img.icons8-html.png);
 }
 
-.item2 {
+.itemLeft2 {
   animation-delay: calc(30s / 8 * (8 - 2) * -1);
-  background-image: url(../../assets/Certficiate/CertificateOfCompletion_BuildingaWebsitewithNode.jsandExpress.js-1.png);
+  background-image: url(../../assets/social-media-icons/img.icons8-css.png);
 }
 
-.item3 {
+.itemLeft3 {
   animation-delay: calc(30s / 8 * (8 - 3) * -1);
-  background-image: url(../../assets/Certficiate/DSTA\ Brainhack\ Code\ EXP\ Participation\ \(finalist\)-1.png);
+  background-image: url(../../assets/social-media-icons/img.icons8-javascript.png);
 }
 
-.item4 {
+.itemLeft4 {
   animation-delay: calc(30s / 8 * (8 - 4) * -1);
-  background-image: url(../../assets/Certficiate/PCEP\ -\ Certified\ Entry-Level\ Python\ Programmer-1.png);
+  background-image: url(../../assets/social-media-icons/img.icons8-nodejs.png);
 }
 
-.item5 {
+.itemLeft5 {
   animation-delay: calc(30s / 8 * (8 - 5) * -1);
-  background-image: url(../../assets/Certficiate/Coursera\ Google\ UX\ Design-1.png);
+  background-image: url(../../assets/social-media-icons/img.icons8-expressjs.png);
 }
 
-.item6 {
+.itemLeft6 {
   animation-delay: calc(30s / 8 * (8 - 6) * -1);
-  background-image: url(../../assets/Certficiate/CertificateOfCompletion_Programming\ Foundations\ Software\ TestingQA-1.png);
+  background-image: url(../../assets/social-media-icons/img.icons8-reactnative.png);
 }
 
-.item7 {
+/* .item7 {
   animation-delay: calc(30s / 8 * (8 - 7) * -1);
+  background-image: url(../../assets/social-media-icons/);
 }
 
 .item8 {
   animation-delay: calc(30s / 8 * (8 - 8) * -1);
+  background-image: url(../../assets/social-media-icons/);
+} */
+
+.itemRight1 {
+  animation-delay: calc(30s / 8 * (8 - 1) * -1);
+  background-image: url(../../assets/social-media-icons/img.icons8-adobeillust.png);
+}
+
+.itemRight2 {
+  animation-delay: calc(30s / 8 * (8 - 2) * -1);
+  background-image: url(../../assets/social-media-icons/img.icons8-adobephotoshop.png);
 }
