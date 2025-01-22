@@ -29,12 +29,12 @@
   
   .marquee:before {
     left: 0;
-    background: linear-gradient(to right, hwb(0 0% 100% / 0.1) 0%, transparent 100%);
+    background: linear-gradient(to right, hwb(0 0% 100% / 0.1) 0%, transparent 60%);
   }
   
   .marquee:after {
     right: 0;
-    background: linear-gradient(to left, hwb(0 0% 100% / 0.1) 0%, transparent 100%);
+    background: linear-gradient(to left, hwb(0 0% 100% / 0.1) 0%, transparent 60%);
   }
   
   .marquee-content {

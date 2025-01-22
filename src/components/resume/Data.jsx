@@ -70,7 +70,31 @@ const Data = [
         year: "Sep 2023 - Mar 2024",
         title: "Temasek Foundation Scale",
         desc: "Lorem ipsum dolor sit amet quo ei simul congue exerci     ad nec admodum perfect"
-    }
+    },
+    {
+        id:10,
+        category: "education",
+        icon: "icon-briefcase",
+        year: "2024",
+        title: "Edusave Merit Bursary",
+        desc: "Lorem ipsum dolor sit amet quo ei simul congue exerci     ad nec admodum perfecto.",
+    },
+    {
+        id:11,
+        category: "experience",
+        icon: "icon-briefcase",
+        year: "2025",
+        title: "Singapore Dreams and You Dialogue",
+        desc: "OMG PRIME MINISTER AND MINISTER OF FINANCE LAWRENCE WONG!!!"
+    },
+    {
+        id:12,
+        category: "experience",
+        icon: "icon-briefcase",
+        year: "2025",
+        title: "JENESYS Online Alumni Program with Daiso Industries Co., Ltd",
+        desc: "Learn about the business strategy of Daiso Japan by Chief Mr. Toshio Izumi"
+    },
 ];
 
 
