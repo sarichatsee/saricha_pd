@@ -1,11 +1,37 @@
-import React from "react";
+import React, {useState} from "react";
 import "./about.css";
-import Image from "../../assets/pictures-of-my-ugly-face/avatar1.png";
+
+import Avatar1 from "../../assets/pictures-of-my-ugly-face/avatar1.png";
+import Avatar2 from "../../assets/pictures-of-my-ugly-face/avatar2.png";
+import Avatar3 from "../../assets/pictures-of-my-ugly-face/avatar3.png";
+
 import AboutBox from "./AboutBox";
 import "../resume/wrapper.css";
 import Marquee from "./Marquee.jsx";
 
 const About = () => {
+    const [currentImage, setCurrentImage] = useState(Avatar1);
+    const [isAnimating, setIsAnimating] = useState(false);
+
+    const handleAvatarClick = () => {
+        if (isAnimating) return; // handle clicks midway animation
+        
+        // Start animation
+        setIsAnimating(true);
+    
+        // Change image halfway through the animation
+        setTimeout(() => {
+            setCurrentImage((prevImage) =>
+                prevImage === Avatar1 ? Avatar2 : prevImage === Avatar2 ? Avatar3 : Avatar1
+            );
+        }, 1125); // Halfway through the animation
+    
+        // End animation after the full duration
+        setTimeout(() => {
+            setIsAnimating(false);
+        }, 1500); // Match the total animation duration
+    };    
+    
     return (
         <section className="about container section" id="about">
             <h2 className="section__title">
@@ -14,7 +40,13 @@ const About = () => {
             </h2>
 
             <div className="about__container grid">
-                <img src={Image} alt="" className="about__img" />
+                {/* Avatar with animation */}
+                <img
+                    src={currentImage}
+                    alt="Avatar"
+                    className={`about__img ${isAnimating ? "animate-avatar" : ""}`}
+                    onClick={handleAvatarClick}
+                />
 
                 <div className="about__data grid">
                     <div className="about__info">

@@ -182,3 +182,30 @@
         width: calc(100% + 8px);
     }
 }
+
+.about__img {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+@keyframes hopAndSpin {
+    0% {
+      transform: translateY(0) rotateY(0deg);
+    }
+    25% {
+      transform: translateY(-20px) rotateY(90deg); /* Hop and halfway spin */
+    }
+    50% {
+      transform: translateY(0) rotateY(180deg); /* Return from hop and spin further */
+    }
+    75% {
+      transform: translateY(-10px) rotateY(270deg); /* Second small hop */
+    }
+    100% {
+      transform: translateY(0) rotateY(360deg); /* Complete spin */
+    }
+  }
+  
+  .about__img.animate-avatar {
+    animation: hopAndSpin 1.5s ease; /* Total animation duration is 1.5s */
+  }
+  

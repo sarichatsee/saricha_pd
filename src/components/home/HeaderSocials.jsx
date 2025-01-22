@@ -19,8 +19,12 @@ const HeaderSocials = () => {
                 <i class="fa-brands fa-dribbble"></i>
             </a>
 
-            <a href="https://www.instagram.com/fixahen/?hl=en" className="home__social-link" target="_blank">
-                <i class="fa-brands fa-pinterest"></i>
+            <a href="https://github.com/sarichatsee" className="home__social-link" target="_blank">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            
+            <a href="https://www.linkedin.com/in/saricha-tsee-7011bb254/" className="home__social-link" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
             </a>
         </div>
     )
