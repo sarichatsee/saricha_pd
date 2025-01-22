@@ -1,104 +1,41 @@
 .wrapper {
-  width: 90%;
-  max-width: 1536px;
-  margin-inline: auto;
+  width: 100%;
   height: 70px;
   margin-bottom: 2rem;
-  position: relative;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  position: relative;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1) inset; /* Retain your shadow */
   mask-image: linear-gradient(
     to right,
     rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 1) 20%,  
-    rgba(0, 0, 0, 1) 80%,  
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
     rgba(0, 0, 0, 0)
-  );
+  ); /* Retain your gradient mask */
+}
+
+.scroller {
   display: flex;
-  align-items: center;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1) inset;
+  gap: 20px; /* Space between icons */
+  width: calc(200%); /* Double the width for seamless looping */
+  animation: scrollLeft 15s linear infinite; /* Continuous, responsive scrolling */
 }
 
 @keyframes scrollLeft {
-  to {
-    left: -200px;
+  from {
+    transform: translateX(0); /* Start position */
   }
-}
-
-@keyframes scrollRight {
   to {
-    right: -200px;
+    transform: translateX(-50%); /* Scroll left by half the width */
   }
 }
 
 .itemLeft, .itemRight {
   width: 50px;
-  height: 60px; 
-  position: absolute;
-  animation-timing-function: linear;
-  animation-duration: 30s;
-  animation-iteration-count: infinite;
-  background-size: contain; /* Sets width to container's width and scales height accordingly */
+  height: 60px;
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position: center; /* Aligns the image to start at the top */
-}
-
-
-.itemLeft {
-  left: max(calc(200px * 8), 100%);
-  animation-name: scrollLeft;
-}
-
-.itemRight {
-  right: max(calc(200px * 8), calc(100% + 200px));
-  animation-name: scrollRight;
-}
-
-.itemLeft1 {
-  animation-delay: calc(30s / 8 * (8 - 1) * -1);
-  background-image: url(../../assets/social-media-icons/img.icons8-html.png);
-}
-
-.itemLeft2 {
-  animation-delay: calc(30s / 8 * (8 - 2) * -1);
-  background-image: url(../../assets/social-media-icons/img.icons8-css.png);
-}
-
-.itemLeft3 {
-  animation-delay: calc(30s / 8 * (8 - 3) * -1);
-  background-image: url(../../assets/social-media-icons/img.icons8-javascript.png);
-}
-
-.itemLeft4 {
-  animation-delay: calc(30s / 8 * (8 - 4) * -1);
-  background-image: url(../../assets/social-media-icons/img.icons8-nodejs.png);
-}
-
-.itemLeft5 {
-  animation-delay: calc(30s / 8 * (8 - 5) * -1);
-  background-image: url(../../assets/social-media-icons/img.icons8-expressjs.png);
-}
-
-.itemLeft6 {
-  animation-delay: calc(30s / 8 * (8 - 6) * -1);
-  background-image: url(../../assets/social-media-icons/img.icons8-reactnative.png);
-}
-
-/* .item7 {
-  animation-delay: calc(30s / 8 * (8 - 7) * -1);
-  background-image: url(../../assets/social-media-icons/);
-}
-
-.item8 {
-  animation-delay: calc(30s / 8 * (8 - 8) * -1);
-  background-image: url(../../assets/social-media-icons/);
-} */
-
-.itemRight1 {
-  animation-delay: calc(30s / 8 * (8 - 1) * -1);
-  background-image: url(../../assets/social-media-icons/img.icons8-adobeillust.png);
-}
-
-.itemRight2 {
-  animation-delay: calc(30s / 8 * (8 - 2) * -1);
-  background-image: url(../../assets/social-media-icons/img.icons8-adobephotoshop.png);
+  background-position: center;
 }

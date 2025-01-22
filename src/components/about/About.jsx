@@ -3,12 +3,15 @@ import "./about.css";
 import Image from "../../assets/pictures-of-my-ugly-face/avatar1.png";
 import AboutBox from "./AboutBox";
 import "../resume/wrapper.css";
+import Marquee from "./Marquee.jsx";
 
 const About = () => {
     return (
         <section className="about container section" id="about">
-            <h2 className="section__title">About Me <br /><span className="text-animation"><span></span></span></h2>
-
+            <h2 className="section__title">
+                About Me <br />
+                <span className="text-animation"><span></span></span>
+            </h2>
 
             <div className="about__container grid">
                 <img src={Image} alt="" className="about__img" />
@@ -16,7 +19,9 @@ const About = () => {
                 <div className="about__data grid">
                     <div className="about__info">
                         <p className="about__description">
-                            I'm Tsee Saricha, developer from Singapore. My favourite pastime is searching for cats around void decks to pet as well as cafe hopping. I'm a Fullstack Developer with experience in React, Node.js, Express and MySQL.
+                            I'm Tsee Saricha, developer from Singapore. My favourite pastime is searching for cats
+                            around void decks to pet as well as cafe hopping. I'm a Fullstack Developer with experience
+                            in React, Node.js, Express, and MySQL.
                         </p>
                         <a href="" className="btn">Download CV</a>
                     </div>
@@ -57,27 +62,11 @@ const About = () => {
 
             <br /><br />
 
-            <div className="wrapper__container">
-                {/* Left scroller */}
-                <div className="wrapper">
-                    <div className="itemLeft itemLeft1"></div>
-                    <div className="itemLeft itemLeft2"></div>
-                    <div className="itemLeft itemLeft3"></div>
-                    <div className="itemLeft itemLeft4"></div>
-                    <div className="itemLeft itemLeft5"></div>
-                    <div className="itemLeft itemLeft6"></div>
-                </div>
-
-                {/* Right scroller */}
-                <div className="wrapper">
-                    <div className="itemRight itemRight1"></div>
-                    <div className="itemRight itemRight2"></div>
-                </div>
-            </div>
+            <Marquee />
 
             <AboutBox />
         </section>
     );
-}
+};
 
-export default About
+export default About;
