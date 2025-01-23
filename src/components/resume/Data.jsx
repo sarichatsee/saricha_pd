@@ -93,7 +93,7 @@ const Data = [
         icon: "icon-briefcase",
         year: "2025",
         title: "JENESYS Online Alumni Program with Daiso Industries Co., Ltd",
-        desc: "Learn about the business strategy of Daiso Japan by Chief Mr. Toshio Izumi"
+        desc: "Learn about the business strategy of Daiso Japan by Chief Mr. Toshio Izumi, in charge of staff recruitment, focusing on diversity, global players & people with disabilities etc."
     },
 ];
 

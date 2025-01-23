@@ -10,7 +10,7 @@ const ScrollDown = () => {
                 </span>
             </a>
         </div>
-    )
-}
+    );
+};
 
-export default ScrollDown
+export default ScrollDown;

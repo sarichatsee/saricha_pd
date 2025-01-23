@@ -1,0 +1,88 @@
+/* General Section Styling */
+.cert {
+    padding: 4rem 2rem;
+    background-color: var(--body-color);
+}
+
+.cert__title {
+    font-size: var(--h1-font-size);
+    text-align: center;
+    margin-bottom: 2.5rem;
+    color: var(--title-color);
+}
+
+/* Filter Buttons */
+.cert__filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1.875rem;
+    margin-bottom: 2rem;
+}
+
+.cert__filter-item {
+    cursor: pointer;
+    font-weight: var(--font-bold);
+    transition: color 0.3s ease;
+}
+
+.cert__filter-item:hover {
+    color: var(--first-color);
+}
+
+/* Certificates Container */
+.cert__container {
+    display: grid; /* Use grid layout */
+    grid-template-rows: repeat(2, auto); /* Exactly 2 rows */
+    grid-auto-flow: column; /* Items flow horizontally */
+    gap: 1.5rem; /* Spacing between images */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scrollbar-width: thin; /* Custom scrollbar width */
+    scrollbar-color: var(--first-color) var(--body-color); /* Custom scrollbar colors */
+}
+
+.cert__container::-webkit-scrollbar {
+    height: 8px; /* Horizontal scrollbar height */
+}
+
+.cert__container::-webkit-scrollbar-thumb {
+    background-color: var(--first-color);
+    border-radius: 4px;
+}
+
+.cert__container::-webkit-scrollbar-track {
+    background-color: var(--body-color);
+}
+
+/* Certificate Card */
+.cert__card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+    height: auto; /* Allow height to adjust dynamically */
+}
+
+/* Certificate Image */
+.cert__image {
+    max-height: 300px; /* Set a maximum height */
+    width: auto; /* Dynamically scale width based on aspect ratio */
+    object-fit: contain; /* Ensure image fits without cropping */
+    transition: transform 0.3s ease;
+}
+
+.cert__card:hover .cert__image {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Hover Mask */
+.cert__mask {
+    display: none; /* Remove hover overlay */
+}
+
+/* Certificate Title */
+.cert__title {
+    display: none; /* Remove hover title */
+}

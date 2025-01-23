@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "./about.css";
 
 import Avatar1 from "../../assets/pictures-of-my-ugly-face/avatar1.png";
@@ -15,23 +15,23 @@ const About = () => {
 
     const handleAvatarClick = () => {
         if (isAnimating) return; // handle clicks midway animation
-        
+
         // Start animation
         setIsAnimating(true);
-    
+
         // Change image halfway through the animation
         setTimeout(() => {
             setCurrentImage((prevImage) =>
                 prevImage === Avatar1 ? Avatar2 : prevImage === Avatar2 ? Avatar3 : Avatar1
             );
         }, 1125); // Halfway through the animation
-    
+
         // End animation after the full duration
         setTimeout(() => {
             setIsAnimating(false);
         }, 1500); // Match the total animation duration
-    };    
-    
+    };
+
     return (
         <section className="about container section" id="about">
             <h2 className="section__title">
@@ -55,7 +55,12 @@ const About = () => {
                             around void decks to pet as well as cafe hopping. I'm a Fullstack Developer with experience
                             in React, Node.js, Express, and MySQL.
                         </p>
-                        <a href="" className="btn">Download CV</a>
+                        <a
+                            href="/assets/Resume-jan2025.pdf"
+                            download="Resume-jan2025.pdf"
+                            className="btn">
+                            Download CV
+                        </a>
                     </div>
 
                     <div className="about__skills grid">
