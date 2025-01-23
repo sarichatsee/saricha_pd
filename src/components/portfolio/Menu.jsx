@@ -12,8 +12,9 @@ import tfscale1 from "../../assets/Project/tfscale_drone.jpg";
 import tfscale2 from "../../assets/Project/tfscale_industryvisit1.jpg";
 import eggpainting1 from "../../assets/Project/art-eggpainting-01.png";
 import c33701 from "../../assets/Project/c337escaperoom01.mp4";
-
 import arnamecard from "../../assets/Project/ar-name-card.mp4";
+import pizzaapp from "../../assets/Project/pizzaapp.png";
+import travelapp from "../../assets/Project/travelapp.png";
  
 const Menu = [
     {
@@ -59,11 +60,19 @@ const Menu = [
     {
         id: 6,
         image: Work6,
-        title: "Game Store App Concept",
-        category: "Art",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus vitae justo",
-        images: [],
+        title: "Pizza App",
+        category: "Programming",
+        desc: "One of the first few small-scale project I did for my module covering React for web development. It's a simple website showing whether the organisation was OPEN or CLOSED, taking the actual time into consideration. I also added a cute logo from usagi and pisuke!",
+        images: [pizzaapp],
     },
+    {
+        id: 7,
+        image: Work6,
+        title: "Travel App",
+        category: "Programming",
+        desc: "A travel app that I did for my module covering React for web development. ",
+        images: [travelapp],
+    }
 ];
 
 export default Menu;
