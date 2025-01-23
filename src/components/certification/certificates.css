@@ -32,13 +32,16 @@
 
 /* Certificates Container */
 .cert__container {
-    display: grid; /* Use grid layout */
-    grid-template-rows: repeat(2, auto); /* Exactly 2 rows */
-    grid-auto-flow: column; /* Items flow horizontally */
-    gap: 1.5rem; /* Spacing between images */
+    display: flex; /* Use flexbox for horizontal layout */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    gap: 1.875rem; /* Space between cards */
     overflow-x: auto; /* Enable horizontal scrolling */
+    overflow-y: hidden; /* Disable vertical scrolling */
+    max-height: 630px; /* Enough for two rows */
+    padding-bottom: 1rem;
     scrollbar-width: thin; /* Custom scrollbar width */
     scrollbar-color: var(--first-color) var(--body-color); /* Custom scrollbar colors */
+    white-space: nowrap; /* Ensure items stay in a single line */
 }
 
 .cert__container::-webkit-scrollbar {
@@ -56,20 +59,18 @@
 
 /* Certificate Card */
 .cert__card {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    flex: 0 0 200px; /* Fixed card width */
+    height: 300px; /* Fixed card height */
+    display: inline-block; /* Ensure cards stay in a row */
     overflow: hidden;
     cursor: pointer;
-    height: auto; /* Allow height to adjust dynamically */
 }
 
 /* Certificate Image */
 .cert__image {
-    max-height: 300px; /* Set a maximum height */
-    width: auto; /* Dynamically scale width based on aspect ratio */
-    object-fit: contain; /* Ensure image fits without cropping */
+    height: 100%; /* Match card height */
+    width: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure image is fully visible without cropping */
     transition: transform 0.3s ease;
 }
 
@@ -85,4 +86,25 @@
 /* Certificate Title */
 .cert__title {
     display: none; /* Remove hover title */
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .cert {
+        padding: 2rem 1rem; /* Reduce padding for smaller screens */
+    }
+
+    .cert__filters {
+        flex-wrap: wrap; /* Allow filter items to wrap on small screens */
+        row-gap: 1rem; /* Add spacing for wrapped filters */
+    }
+
+    .cert__container {
+        gap: 1rem; /* Reduce gap between items */
+    }
+
+    .cert__card {
+        flex: 0 0 150px; /* Smaller card width */
+        height: 225px; /* Reduce height to match smaller screens */
+    }
 }
