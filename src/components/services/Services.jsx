@@ -1,8 +1,9 @@
 import React from "react";
 import "./services.css";
-import Image1 from "../../assets/service-1.svg";
-import Image2 from "../../assets/service-2.svg";
-import Image3 from "../../assets/service-3.svg";
+import Image1 from "../../assets/ui.png";
+import Image2 from "../../assets/coding.png";
+import Image3 from "../../assets/palette.png";
+import Image4 from "../../assets/game-console.png";
 
 const data = [
     {
@@ -28,7 +29,7 @@ const data = [
     },
     {
       id: 4,
-      image: Image3,
+      image: Image4,
       title: "Game Development",
       description:
         "With a passion for immersive experiences, I have designed both VR and AR projects, including a VR escape room and various AR applications, all developed in Unity",

@@ -4,6 +4,15 @@
     row-gap: 1.875rem;
 }
 
+.services__img {
+    margin-bottom: 1.25rem;
+    width: 100px; /* Adjust width to your preferred size */
+    height: 100px; /* Set height to maintain uniformity */
+    object-fit: contain; /* Ensures the image doesn't stretch */
+    display: block;
+    margin: 0 auto 1.25rem; /* Center the image and add spacing below */
+}
+
 /* Responsive for smaller screens */
 @media (max-width: 1024px) {
     .services__container {
@@ -15,6 +24,14 @@
         grid-template-columns: 1fr;
     }
 }
+
+@media (max-width: 768px) {
+    .services__img {
+        width: 80px;
+        height: 80px;
+    }
+}
+
 
 .services__card {
     text-align: center;

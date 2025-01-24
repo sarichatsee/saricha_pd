@@ -1,54 +1,42 @@
-:root {
+/* Scoped styles for Cats Page */
+.cat-container {
     --frame-color: #ffb6c1; /* Light pink frame color */
     --shadow-color: rgba(0, 0, 0, 0.15); /* Box shadow color */
-    --sidebar-width: 80px; /* Sidebar width */
+    --sidebar-width: 120px; /* Sidebar width */
     --card-spacing: 20px; /* Spacing between cards */
     --card-padding: 15px; /* Padding inside each card */
-}
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
+    margin-left: var(--sidebar-width);
+    padding: var(--card-spacing);
     background-color: #fdfdfd; /* Match the site's background */
 }
 
-main {
-    margin-left: 120px; /* Account for the sidebar width */
-    padding: var(--card-spacing);
-    background-color: #fdfdfd;
-}
-
-.masonry {
+.cat-container .masonry {
     column-count: 4; /* Number of columns */
     column-gap: var(--card-spacing); /* Space between columns */
 }
 
-.item {
+.cat-container .item {
     display: inline-block;
     width: 100%; /* Ensure items fit into columns */
     margin: 0 0 var(--card-spacing); /* Add spacing between items */
     background-color: var(--frame-color); /* Pink background */
-    border-radius: 15px; /* Rounded corners for the cards */
+    border-radius: 5px; /* Rounded corners for the cards */
     box-shadow: 0 4px 6px var(--shadow-color); /* Subtle elevation */
     padding: var(--card-padding); /* Add padding inside the card */
     box-sizing: border-box;
     overflow: hidden; /* Prevent image overflow */
 }
 
-.item img {
+.cat-container .item img {
     width: 100%; /* Ensure image takes full width */
     height: auto; /* Maintain aspect ratio */
-    border-radius: 10px; /* Match card's rounded corners */
+    border-radius: 5px; /* Match card's rounded corners */
     display: block;
     margin-bottom: 10px; /* Add space below the image */
 }
 
-.item figcaption {
+.cat-container .item figcaption {
     font-size: 14px;
     font-weight: bold;
     color: #333;
@@ -58,19 +46,19 @@ main {
 
 /* Adjust layout for responsiveness */
 @media (max-width: 1200px) {
-    .masonry {
+    .cat-container .masonry {
         column-count: 3; /* Reduce columns on smaller screens */
     }
 }
 
 @media (max-width: 768px) {
-    .masonry {
+    .cat-container .masonry {
         column-count: 2; /* Further reduce columns */
     }
 }
 
 @media (max-width: 480px) {
-    .masonry {
+    .cat-container .masonry {
         column-count: 1; /* Single column layout for mobile */
     }
 }
