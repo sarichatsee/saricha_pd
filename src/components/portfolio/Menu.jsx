@@ -4,6 +4,12 @@ import Work3 from "../../assets/work-3.svg";
 import Work4 from "../../assets/work-4.svg";
 import Work5 from "../../assets/work-5.svg";
 import Work6 from "../../assets/work-6.svg";
+import namecard1 from "../../assets/Project/namecard-sketch1.png";
+import namecard2 from "../../assets/Project/namecard-sketch2.png";
+import namecard3 from "../../assets/Project/namecard-sketch3.png";
+import namecard4 from "../../assets/Project/front namecard print.png";
+import Art1 from "../../assets/Project/G107-SDL-Wk10-Wk11.jpg";
+import Art2 from "../../assets/Project/pfp.png";
 
 /* Project pictures */
 import beleaf1 from "../../assets/Project/brainhack-codexp_teamphoto.jpg";
@@ -22,7 +28,7 @@ const Menu = [
         image: Work1,
         title: "VR Escape Room",
         category: "Programming",
-        desc: "Inspired by the iconic openings of beloved RPGs, particularly The Legend of Zelda: Breath of the Wild, my VR escape room transports players into a mystical world where they awaken in an ancient sanctuary. To reach the open world beyond, players must solve intricate musical puzzles, navigate teleportation pads, and master potion mixing, mirroring the classic RPG challenge of preparation before exploration. Developed in Unity, I used complex logic for scenario-based color changes, object spawning, and dynamic transitions. This project was both intensive and deeply rewarding, blending my love for RPG storytelling with the challenge of immersive puzzle design.",
+        desc: "Inspired by the iconic openings of beloved RPGs, particularly The Legend of Zelda: Breath of the Wild, my VR escape room transports players into a mystical world where they awaken in an ancient sanctuary. To reach the open world beyond, players must solve intricate puzzles that include musical sequences, teleportation pad navigation, and potion mixing. This mirrors the classic RPG element of preparation and problem-solving before stepping into a vast, open world. \n\nDeveloped in Unity, the project challenged me to create immersive and interactive gameplay. I implemented complex logic systems for scenario-based color changes, object spawning, and smooth dynamic transitions between environments. This project allowed me to blend storytelling, puzzle design, and programming, resulting in a truly rewarding experience that captures the spirit of exploration and creativity.",
         images: [c33701],
     },
     {
@@ -30,31 +36,31 @@ const Menu = [
         image: Work2,
         title: "BeLeaf Mobile App",
         category: "Programming",
-        desc: "Team BinaryBlossoms went to participate in DSTA's BrainHack 2024 CODE_EXP, and are proud to announce that we have made finals with our prototype! <br />BeLeaf is a mobile application utilising Amazon Web Service's Rekognition to help differentiate between real and fake plants. It is designed to help combat the issue of contaminated recyclables. \nUsers will be able to take a picture of the object they want to recycle, and the app will be able to differentiate recyclables from non-recyclables, additionally, it can also recommend users on what to do with non-recyclables - like dropping off a toy ball at an orphanage or thrift store. ",
-        images: [beleaf1, beleaf2, tfscale1, tfscale2],
+        desc: "As part of Team BinaryBlossoms, I had the privilege of competing in DSTA's BrainHack 2024 CODE_EXP, where we proudly made it to the finals with our innovative app, BeLeaf. The app is designed to address the issue of contaminated recyclables using Amazon Web Service's Rekognition. With BeLeaf, users can take a photo of an item to determine if it is recyclable or non-recyclable. \n\nBeyond identification, BeLeaf also provides actionable suggestions for non-recyclable items, such as donating toys or clothes to orphanages or thrift stores. This feature ensures that users can make environmentally conscious decisions even when traditional recycling isn't an option. This project not only honed my programming and teamwork skills but also highlighted the role technology can play in promoting sustainability.",
+        images: [beleaf1, beleaf2],
     },
     {
         id: 3,
         image: Work3,
-        title: "Creative",
+        title: "AR Name Card",
         category: "Branding",
-        desc: "This AR name card reflects my passion for design and animation, blending a Japanese cartoon-style illustration with a custom pixel art logo I designed myself. Built in Unity, the card comes to life with dynamic AR effects, offering a playful introduction to my work and personality. I used assets from the Unity store for 3D models, integrating them seamlessly to create an engaging experience that’s both professional and fun.",
+        desc: "My AR name card project combines my love for design, animation, and technology. Using Unity, I created an interactive business card that brings my brand to life through augmented reality effects. The design reflects a playful yet professional style, featuring a Japanese cartoon-inspired illustration and a custom pixel art logo I developed myself. \n\nTo enhance the user experience, I incorporated assets from the Unity store, carefully integrating them with my original art to create a cohesive visual narrative. This AR name card is not just a creative project—it serves as a unique and memorable introduction to my skills and personality.",
         images: [arnamecard],
     },
     {
         id: 4,
         image: Work4,
-        title: "Bird Repository Website",
-        category: "Programming",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus vitae justo",
-        images: [],
+        title: "Name Card Design",
+        category: "Branding",
+        desc: "After months of coding and programming, I decided to shift gears and revisit my artistic roots by designing a personal name card. Using Clip Studio Paint, I explored different concepts, creating three initial sketches before finalizing the design that best represented me. \n\nThis name card showcases not only my artistic aptitude but also my attention to detail and ability to create visually compelling designs. It was a refreshing experience that reminded me of the importance of balancing technical and creative pursuits.",
+        images: [namecard4, namecard1, namecard2, namecard3],
     },
     {
         id: 5,
         image: Work5,
         title: "Sunny-Side-Up Painting",
         category: "Art",
-        desc: "Yummy! Except, I dislike eating eggs. This did not stop my art teacher from making it be my oil painting subject! Proudest moment would be when the principal asked if she could hang it in her office, but I declined as I wanted to bring it back to show my grandfather <3",
+        desc: "Eggs may not be my favorite food, but they became the unlikely subject of one of my proudest artistic achievements. My art teacher challenged me to create an oil painting of a sunny-side-up egg, and the result was so well-received that the principal requested to display it in her office. While I was flattered, I chose to bring it home to share with my grandfather, who inspired much of my creativity. \n\nThis project taught me the value of embracing challenges, even when they're outside of my comfort zone, and the power of art to connect with others on a personal level.",
         images: [eggpainting1],
     },
     {
@@ -62,7 +68,7 @@ const Menu = [
         image: Work6,
         title: "Pizza App",
         category: "Programming",
-        desc: "One of the first few small-scale project I did for my module covering React for web development. It's a simple website showing whether the organisation was OPEN or CLOSED, taking the actual time into consideration. I also added a cute logo from usagi and pisuke!",
+        desc: "The Pizza App was one of my first small-scale projects during my module on React for web development. This simple yet functional website displays whether a fictional pizza restaurant is open or closed, using the actual time to determine its status. \n\nBeyond its practical functionality, I added a playful touch with a logo featuring Usagi and Pisuke, showcasing my ability to blend technical skills with a bit of fun. This project marked an important step in my journey to mastering React and creating user-friendly web applications.",
         images: [pizzaapp],
     },
     {
@@ -70,8 +76,24 @@ const Menu = [
         image: Work6,
         title: "Travel App",
         category: "Programming",
-        desc: "A travel app that I did for my module covering React for web development. ",
+        desc: "This Travel App was developed as part of a React web development module and represents my early exploration of creating functional and visually appealing web applications. Designed to cater to modern travelers, the app provides essential travel features in a sleek and intuitive interface. \n\nAlthough this was a relatively small project, it allowed me to apply React concepts such as state management and component-based architecture while focusing on user experience design. This project was a stepping stone that deepened my understanding of front-end development.",
         images: [travelapp],
+    },
+    {
+        id: 8,
+        image: Work6,
+        title: "Multiracial Society Artwork",
+        category: "Art",
+        desc: "Created during my Global Communications module, this artwork celebrates Singapore's rich cultural diversity and the friendships I’ve formed over the years. Reflecting on my childhood, I dedicated this piece to my first group of friends, including a Japanese friend, a mixed Australian/Malaysian friend, a Malay friend, and myself, representing a blend of Chinese and Thai heritage. \n\nThis project allowed me to explore themes of identity and multiculturalism, emphasizing how Singapore embraces its diverse cultures. It stands as a testament to the importance of unity and mutual respect in a multiracial society.",
+        images: [Art1],
+    },
+    {
+        id: 9,
+        image: Work6,
+        title: "Original Illustration",
+        category: "Art",
+        desc: "Inspired by the vibrant and expressive style of anime, I challenged myself to return to drawing after years of focusing on other pursuits. This original illustration reflects my personal growth as an artist and my ability to convey emotion and storytelling through visual art. \n\nTaking the time to refine my techniques and experiment with new styles reminded me of the joy of creating purely for the sake of expression. This piece represents not only my skills but also my dedication to lifelong learning and self-improvement.",
+        images: [Art2],
     }
 ];
 
