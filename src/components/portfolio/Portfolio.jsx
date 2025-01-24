@@ -69,16 +69,28 @@ const Portfolio = () => {
 
             {/* Modal */}
             {modal && (
-                <div className={`modal__overlay ${isVisible ? "active" : ""}`} onClick={closeModal}>
-                    <div className="modal__content" onClick={(e) => e.stopPropagation()}>
-                        <button className="close__modal" onClick={closeModal}>X</button>
+                <div
+                    className={`modal__overlay ${isVisible ? "active" : ""}`}
+                    onClick={closeModal}
+                >
+                    <div
+                        className="modal__content"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <button className="close__modal" onClick={closeModal}>
+                            X
+                        </button>
                         {selectedItem && (
                             <>
                                 <h3>{selectedItem.title}</h3>
                                 <p>{selectedItem.category}</p>
                                 {/* Render TestCarousel with selected images */}
                                 <TestCarousel images={selectedItem.images} />
-                                <p dangerouslySetInnerHTML={{ __html: selectedItem.desc }}></p>
+                                <p
+                                    dangerouslySetInnerHTML={{
+                                        __html: selectedItem.desc,
+                                    }}
+                                ></p>
                             </>
                         )}
                     </div>

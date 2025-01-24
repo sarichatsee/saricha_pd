@@ -68,7 +68,6 @@ const Contact = () => {
                             required
                         ></textarea>
                     </div>
-
                     <input type="submit" value="Send Message" className="btn"></input>
                 </form>
             </div>
