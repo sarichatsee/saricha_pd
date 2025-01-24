@@ -1,6 +1,6 @@
-.about__container {
-    grid-template-columns: 3fr 9fr;
-    column-gap: 1.875rem;
+/* .about__container {
+    grid-template-columns: 4fr 8fr;
+    column-gap: 2rem;
 }
 
 .about__data {
@@ -24,7 +24,40 @@
     position: absolute;
     left: -0.93rem;
     top: 20%;
+} */
+
+.about__container {
+    display: grid;
+    grid-template-columns: 3fr 9fr; /* Avatar auto-width, text takes remaining space */
+    column-gap: 1.875rem; /* Gap between avatar and bubble */
+    align-items: start; /* Align everything to the top */
 }
+
+.about__data {
+    padding: 1.875rem; /* Adjust spacing inside the bubble */
+    background-color: var(--container-color); /* Bubble color */
+    box-shadow: var(--shadow); /* Add shadow for depth */
+    border-radius: var(--border-radius); /* Rounded corners */
+    position: relative; /* Needed for the triangle positioning */
+    height: auto; /* Let the bubble size itself to fit its content */
+    align-self: center; /* Vertically align it to the middle of the grid */
+    justify-self: center; /* Horizontally align it in the column */
+    max-width: 600px; /* Limit the bubble width for better readability */
+}
+
+
+.about__data::before {
+    content: ''; /* Creates the triangle */
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent; /* Triangle shape */
+    border-bottom: 10px solid transparent;
+    border-right: 15px solid var(--container-color); /* Matches bubble color */
+    position: absolute; /* Position triangle relative to the bubble */
+    left: -15px; /* Adjust to align with the avatar */
+    top: 20%; /* Adjust to point near the middle of the avatar */
+}
+
 
 .about__description {
     margin-bottom: 1rem;
@@ -83,11 +116,10 @@
 .about__boxes {
     grid-template-columns: repeat(4, 1fr);
     column-gap: 1.875rem;
-    margin-top: 4.35rem;
+    margin-top: 1.875rem;
 }
 
 .about__box {
-    display: flex;
     column-gap: 1.5rem;
 }
 
@@ -184,8 +216,12 @@
 }
 
 .about__img {
-    transition: transform 0.5s ease, opacity 0.5s ease;
+    max-height: 500px; /* Set a max height for the avatar */
+    width: auto; /* Maintain aspect ratio */
+    align-self: center; /* Vertically align it to the middle */
+    justify-self: center; /* Horizontally align it */
 }
+
 
 @keyframes hopAndSpin {
     0% {

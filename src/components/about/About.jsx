@@ -48,7 +48,7 @@ const About = () => {
                     onClick={handleAvatarClick}
                 />
 
-                <div className="about__data grid">
+                <div className="about__data">
                     <div className="about__info">
                         <p className="about__description">
                             I'm Tsee Saricha, developer from Singapore. My favourite pastime is searching for cats
@@ -63,7 +63,7 @@ const About = () => {
                         </a>
                     </div>
 
-                    <div className="about__skills grid">
+                    {/* <div className="about__skills grid">
                         <div className="skills__data">
                             <div className="skills__title">
                                 <h3 className="skills__name">Development</h3>
@@ -93,13 +93,14 @@ const About = () => {
                                 <span className="skills__percentage graphic__design"></span>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
+                    <br/>
+                    <Marquee />
                 </div>
+                
             </div>
 
-            <br /><br />
-
-            <Marquee />
+            
 
             <AboutBox />
         </section>
