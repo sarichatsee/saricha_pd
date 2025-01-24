@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./about.css";
 
 import Avatar1 from "../../assets/pictures-of-my-ugly-face/avatar1.png";
@@ -50,11 +51,17 @@ const About = () => {
 
                 <div className="about__data">
                     <div className="about__info">
-                        <p className="about__description">
+                        {/* <p className="about__description">
                             I'm Tsee Saricha, developer from Singapore. My favourite pastime is searching for cats
                             around void decks to pet as well as cafe hopping. I'm a Fullstack Developer with experience
                             in React, Node.js, Express, and MySQL.
+                        </p> */}
+                        <p>
+                            I'm Tsee Saricha, developer from Singapore. My favourite pastime is searching for 
+                            <Link to="/cats" style={{ color: "inherit", textDecoration: "underline" }}> cats </Link>
+                             around void decks to pet as well as cafe hopping. I'm a Fullstack Developer with experience in React, Node.js, Express, and MySQL.
                         </p>
+
                         <a
                             href="/assets/Resume-jan2025.pdf"
                             download="Resume-jan2025.pdf"
@@ -94,13 +101,13 @@ const About = () => {
                             </div>
                         </div>
                     </div> */}
-                    <br/>
+                    <br />
                     <Marquee />
                 </div>
-                
+
             </div>
 
-            
+
 
             <AboutBox />
         </section>

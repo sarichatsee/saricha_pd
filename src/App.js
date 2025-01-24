@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Sidebar from './components/sidebar/Sidebar';
 import Home from './components/home/Home';
@@ -8,21 +9,32 @@ import Resume from './components/resume/Resume';
 import Portfolio from './components/portfolio/Portfolio';
 import Contact from './components/contact/Contact';
 import Certificate from './components/certification/Certificates';
+import CatsPage from './components/cats/CatsPage';
 
 const App = () => {
   return (
-    <>
+    <Router>
       <Sidebar />
-      <main className='main'>
-        <Home />
-        <About />
-        <Services />
-        <Resume />
-        <Portfolio />
-        <Certificate />
-        <Contact />
-      </main>
-    </>
+      <Routes>
+        {/* Main Page Route */}
+        <Route
+          path="/"
+          element={
+            <main className="main">
+              <Home />
+              <About />
+              <Services />
+              <Resume />
+              <Portfolio />
+              <Certificate />
+              <Contact />
+            </main>
+          }
+        />
+        {/* Cats Page Route */}
+        <Route path="/cats" element={<CatsPage />} />
+      </Routes>
+    </Router>
   );
 };
 

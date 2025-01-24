@@ -8,11 +8,18 @@
     }
 }
 
-.nav__logo img {
-    width: 50px; /* Adjust logo size */
-    height: auto; /* Maintain aspect ratio */
-    transition: transform 0.3s ease; /* Smooth transition for hover or click */
-    cursor: pointer; /* Indicate it's clickable */
+button {
+    all: unset; /* Resets all default button styles */
+    cursor: pointer; /* Add pointer cursor for buttons */
+}
+
+.nav__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none; /* Remove any background */
+    border: none; /* Remove any border */
+    padding: 0; /* Remove default padding */
 }
 
 .nav__logo img.spin {
@@ -24,14 +31,12 @@
     display: inline-block; /* Ensure proper layout alignment */
 }
 
-
 .aside {
     position: fixed;
     top: 0;
     left: 0;
-    /* background: var(--body-color); */
-    background: var(--body-color);
-    border-right: 1px solid rgba(0, 0, 0, 0.05);
+    background: var(--body-color); /* Match the body color */
+    border-right: 1px solid rgba(0, 0, 0, 0.05); /* Sidebar border */
     padding: 2rem;
     width: 110px;
     min-height: 100vh;
@@ -40,6 +45,7 @@
     justify-content: space-between;
     z-index: 10;
 }
+
 .nav__list {
     display: flex;
     flex-direction: column;
@@ -51,7 +57,14 @@
     font-size: 1.5rem;
     color: var(--title-color);
     font-weight: var(--font-bold);
-    transition: .3s;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem; /* Adjust icon container size */
+    height: 3rem; /* Adjust icon container size */
+    border-radius: 50%; /* Make the container circular */
+    background: var(--body-color); /* Match the navbar color */
 }
 
 .nav__link:hover {
