@@ -1,4 +1,7 @@
 import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCat } from '@fortawesome/free-solid-svg-icons';
+
 
 const AboutBox = () => {
     return (
@@ -22,11 +25,11 @@ const AboutBox = () => {
             </div>
 
             <div className="about__box">
-                <i className="about__icon icon-people"></i>
+                <FontAwesomeIcon icon={faCat} size="2x" className="about__icon" />
 
                 <div>
                     <h3 className="about__title">6</h3>
-                    <span className="about__subtitl">Satisfied Clients</span>
+                    <span className="about__subtitl">Cats Petted</span>
                 </div>
             </div>
 
