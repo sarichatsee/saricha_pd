@@ -5,7 +5,7 @@ const Data = [
         icon: "icon-graduation",
         year: "May 2024 - June 2024",
         title: "DSTA BrainHack CODE_EXP Finalist",
-        desc: "Lorem ipsum dolor sit amet quo ei simul congue exerci     ad nec admodum perfecto.",
+        desc: "My team and I were finalist in DSTA Brainhack CODE_EXP, amongst other tertiary instituitions who competed alongside us. We utilised Amazon Rekognition to help users easily idntify if what they took a picture of was recyclable or not.",
     },
     {
         id: 2,
